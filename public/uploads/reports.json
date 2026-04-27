@@ -84,5 +84,20 @@
         "timestamp": "2026-04-27T10:44:08.737Z"
       }
     ]
+  },
+  {
+    "id": "RPT-1777306007880-FV0KG",
+    "timestamp": "2026-04-27T16:06:47.880Z",
+    "name": "",
+    "phone": "",
+    "type": "Pemadaman",
+    "description": "",
+    "location": "Sajen,  Trucuk,  Klaten",
+    "lat": -7.7294374613200585,
+    "lng": 110.70040941238405,
+    "severity": "low",
+    "status": "pending",
+    "imageUrl": "/uploads/RPT-1777306007880-FV0KG-image.jpg",
+    "videoUrl": null
   }
 ]
