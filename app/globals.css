@@ -22,3 +22,10 @@ body {
 .leaflet-container {
   background: #e8e0d8;
 }
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

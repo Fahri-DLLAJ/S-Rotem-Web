@@ -4,11 +4,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   AlertTriangle, Cpu, WifiOff, CheckCircle2, Activity,
-  FileText, Map, Settings, Users, ChevronRight,
-  TrendingUp, Clock, RefreshCw, Shield,
+  FileText, Map, Settings, ChevronRight,
+  TrendingUp, Clock, RefreshCw, Shield, LogOut,
 } from "lucide-react";
 import { useReports } from "@/hooks/useReports";
 import { useDevices } from "@/hooks/useDevices";
+import { useAuth } from "@/hooks/useAuth";
 import ActivityFeed from "@/components/dashboard/ActivityFeed";
 
 const DashboardMap = dynamic(() => import("@/components/dashboard/DashboardMap"), { ssr: false });
@@ -39,6 +40,7 @@ const QUICK_LINKS = [
 export default function DashboardPage() {
   const { reports, todayCount, resolvedCount } = useReports();
   const { devices, activeCount, systemStatus } = useDevices();
+  const { user, logout } = useAuth();
 
   const unverified  = reports.filter((r) => r.status === "pending").length;
   const offlineCount = devices.filter((d) => d.status === "offline").length;
@@ -71,9 +73,15 @@ export default function DashboardPage() {
               <RefreshCw size={11} className="animate-spin" style={{ animationDuration: "4s" }} />
               <span className="hidden sm:inline">Live</span>
             </div>
-            <Link href="/dashboard" className="hidden sm:flex items-center gap-1.5 text-xs bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-1.5 rounded-lg transition-colors">
-              <Settings size={12} /> Pengaturan
-            </Link>
+            {user && (
+              <span className="hidden sm:inline text-xs text-gray-500 truncate max-w-[140px]">{user.email}</span>
+            )}
+            <button
+              onClick={logout}
+              className="flex items-center gap-1.5 text-xs bg-white/5 hover:bg-red-600/20 hover:text-red-400 hover:border-red-500/30 border border-white/10 px-3 py-1.5 rounded-lg transition-colors"
+            >
+              <LogOut size={12} /> <span className="hidden sm:inline">Keluar</span>
+            </button>
           </div>
         </div>
       </div>

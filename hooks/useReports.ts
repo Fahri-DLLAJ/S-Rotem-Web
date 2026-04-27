@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
 import { useAppStore, Report } from "@/store/appStore";
-import { rtdb, ref, onValue, off } from "@/lib/firebase";
 
 const MOCK_REPORTS: Report[] = [
   {
@@ -62,30 +61,11 @@ const MOCK_REPORTS: Report[] = [
 ];
 
 export function useReports() {
-  const { user, reports, setReports } = useAppStore();
+  const { reports, setReports } = useAppStore();
 
   useEffect(() => {
-    // If authenticated, subscribe to Firebase RTDB /reports
-    if (user) {
-      const reportsRef = ref(rtdb, "reports");
-      onValue(reportsRef, (snapshot) => {
-        const val = snapshot.val();
-        if (val) {
-          const parsed: Report[] = Object.entries(val).map(([id, data]) => ({
-            id,
-            ...(data as Omit<Report, "id">),
-          }));
-          setReports(parsed);
-        } else {
-          setReports([]);
-        }
-      });
-      return () => off(reportsRef);
-    } else {
-      // Not authenticated — use mock data so the UI is never empty
-      if (reports.length === 0) setReports(MOCK_REPORTS);
-    }
-  }, [user]);
+    if (reports.length === 0) setReports(MOCK_REPORTS);
+  }, []);
 
   const todayCount = reports.filter(
     (r) => new Date(r.timestamp).toDateString() === new Date().toDateString()

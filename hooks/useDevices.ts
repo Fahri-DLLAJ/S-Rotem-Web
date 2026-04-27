@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
 import { useAppStore, Device } from "@/store/appStore";
-import { rtdb, ref, onValue, off } from "@/lib/firebase";
 
 const MOCK_DEVICES: Device[] = [
   { id: "d1", name: "Kamera Simpang Pedan",        type: "camera",        lat: -7.7059, lng: 110.6010, status: "active",  ip: "192.168.1.101", lastSeen: new Date().toISOString() },
@@ -15,30 +14,11 @@ const MOCK_DEVICES: Device[] = [
 ];
 
 export function useDevices() {
-  const { user, devices, setDevices } = useAppStore();
+  const { devices, setDevices } = useAppStore();
 
   useEffect(() => {
-    // If authenticated, subscribe to Firebase RTDB /devices
-    if (user) {
-      const devicesRef = ref(rtdb, "devices");
-      onValue(devicesRef, (snapshot) => {
-        const val = snapshot.val();
-        if (val) {
-          const parsed: Device[] = Object.entries(val).map(([id, data]) => ({
-            id,
-            ...(data as Omit<Device, "id">),
-          }));
-          setDevices(parsed);
-        } else {
-          setDevices([]);
-        }
-      });
-      return () => off(devicesRef);
-    } else {
-      // Not authenticated — use mock data
-      if (devices.length === 0) setDevices(MOCK_DEVICES);
-    }
-  }, [user]);
+    if (devices.length === 0) setDevices(MOCK_DEVICES);
+  }, []);
 
   const activeCount = devices.filter((d) => d.status === "active").length;
 

@@ -1,36 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🌟 Tentang Proyek IniS-Rotem Web adalah proyek aplikasi web modern yang dibangun secara khusus sebagai bagian dari portofolio dan persiapan ajang kompetisi Duta Lalu Lintas dan Angkutan Jalan (LLAJ), yang diinisiasi dan dikembangkan oleh M.Fahri Firnando.Aplikasi ini tidak sekadar antarmuka informasi biasa, melainkan dirancang untuk memberikan performa tinggi, keamanan tipe data (Type-Safe), dan memiliki kapabilitas integrasi mendalam dengan AI Agents serta pemrosesan data melalui ekosistem Python internal. Proyek ini mencerminkan visi inovasi teknologi dalam mendukung sektor lalu lintas dan angkutan jalan yang lebih cerdas.🎯 Visi & Misi LLAJProyek ini tidak hanya sebatas baris kode, tetapi membawa misi sosial untuk sektor transportasi:Edukasi Interaktif: Memberikan informasi dan pemahaman tata tertib lalu lintas kepada masyarakat melalui antarmuka yang modern dan mudah diakses.Analisis Data Cerdas: Mengubah data mentah menjadi informasi berharga (melalui backend Python) untuk memahami pola berlalu lintas.Aksesibilitas Tinggi: Menciptakan jembatan teknologi antara instansi terkait dan masyarakat luas.💡 Insight RepositoriDari struktur dan codebase yang ada, repositori ini memberikan beberapa insight teknis yang luar biasa:🤖 AI-Driven Architecture: Keberadaan dokumen strategis seperti AGENTS.md dan CLAUDE.md menunjukkan bahwa aplikasi ini dibangun dengan mindset interaksi AI (Kecerdasan Buatan). Ini membuka potensi untuk asisten virtual LLAJ, analisis prediktif, atau otomasi layanan informasi.⚙️ Hybrid Processing (Node.js + Python): Selain mengandalkan Next.js untuk frontend yang super cepat, integrasi direktori python/ mengindikasikan kesiapan sistem untuk menangani tugas berat—seperti machine learning, analitik data lalu lintas, atau komputasi logistik yang tidak efisien jika dijalankan di sisi klien.🛡️ Fokus pada Keandalan Sistem: Dengan penggunaan TypeScript hingga 78% dari total kode, proyek ini meminimalisir potensi runtime error secara drastis. Hal ini menunjukkan standar rekayasa perangkat lunak (Software Engineering) yang profesional dari pengembangnya.✨ Fitur Utama⚡ Super Cepat & SEO Friendly: Menggunakan fitur App Router Next.js untuk SSR (Server-Side Rendering) dan SSG (Static Site Generation), memastikan akses informasi publik berjalan tanpa hambatan.🧠 Agen Cerdas (Agents): Dibekali dengan fondasi komunikasi agen AI yang terstruktur untuk mengotomatisasi solusi cerdas.🧩 Modular & Reusable: Komponen UI dirancang terpisah dalam folder components/ dipadukan dengan kustomisasi Hooks (hooks/) untuk penggunaan berulang yang efisien.🗂️ Global State Management: Pengelolaan siklus hidup data interaktif pada direktori store/.🗺️ Peta Jalan (Roadmap) PengembanganProyek ini dirancang untuk terus berkembang dengan fase-fase berikut:$$x$$ Fase 1: Konfigurasi Arsitektur Dasar (Next.js, TypeScript, Tailwind).$$x$$ Fase 2: Integrasi Sistem Manajemen State & Standarisasi Code Quality.$$ $$ Fase 3: Implementasi AI Agents untuk Asisten Edukasi Lalu Lintas.$$ $$ Fase 4: Analitik Data Kepolisian/LLAJ tingkat lanjut menggunakan Python Backend.$$ $$ Fase 5: Optimasi Aksesibilitas Publik & Kampanye Duta LLAJ.👥 Target PenggunaMasyarakat Umum & Pelajar: Sebagai media edukasi interaktif untuk meningkatkan kesadaran keselamatan berkendara.Instansi Transportasi & Penegak Hukum: Sebagai prototipe dasbor analitik berbasis AI.Penggiat Teknologi Keselamatan: Sebagai referensi open-source untuk pengembangan sistem lalu lintas modern.📂 Struktur DirektoriBerikut adalah representasi arsitektur rapi dari repositori inovasi ini:S-Rotem-Web/
+├── app/            # Entry point aplikasi & Routing Next.js (App Router)
+├── components/     # Kumpulan komponen UI (Reusable Components)
+├── hooks/          # React Custom Hooks
+├── lib/            # Fungsi utilitas, konfigurasi eksternal, dan API wrapper
+├── public/         # Aset statis (gambar, font, ikon)
+├── python/         # Modul integrasi Python & pemrosesan analitik tingkat lanjut
+├── store/          # Konfigurasi manajemen state global (Redux/Zustand)
+├── AGENTS.md       # Dokumentasi panduan/instruksi Agen AI
+└── CLAUDE.md       # Konfigurasi & integrasi model bahasa (LLM) Claude
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🛠️ Stack TeknologiKategoriTeknologiFramework WebNext.js, ReactBahasa PemrogramanTypeScript, JavaScript, PythonStylingCSS / PostCSS / TailwindCode QualityESLint🤝 Dukungan & Ucapan Terima KasihProyek ini merupakan dedikasi M.Fahri Firnando untuk membawa inovasi digital ke dalam lingkup Lalu Lintas dan Angkutan Jalan (LLAJ). Karya ini tentu tidak akan terwujud tanpa bimbingan, dukungan, dan doa dari berbagai pihak. Oleh karena itu, ucapan terima kasih yang sebesar-besarnya didedikasikan kepada:Bapak Sri Murtono, S.Pd., M.Eng. selaku Kepala Sekolah SMK N 2 Klaten, atas dukungan penuh, fasilitas, dan motivasi untuk terus berprestasi.Bapak Tri Winarno dan Ibu Dita selaku guru pembimbing, atas arahan yang luar biasa, ilmu yang bermanfaat, serta kesabaran yang tak terhingga selama proses persiapan.Tim "Bissmillah" atas kerja keras, solidaritas, dan bantuan tak kenal lelah di balik layar.Serta seluruh teman-teman seperjuangan dan pihak-pihak lainnya yang tidak bisa disebutkan satu per satu atas setiap dukungan moral dan semangatnya.Jika Anda menemukan proyek ini menarik atau selaras dengan visi digitalisasi transportasi, dukungan berupa Star ⭐️ pada repositori ini sangat diapresiasi!

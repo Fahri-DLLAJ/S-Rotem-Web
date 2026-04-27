@@ -1,5 +1,4 @@
 import { create } from "zustand";
-import { User } from "firebase/auth";
 
 export interface StatusHistoryEntry {
   status: "pending" | "active" | "resolved";
@@ -39,12 +38,6 @@ export interface Device {
 }
 
 interface AppState {
-  // ── Auth ──────────────────────────────────────────────
-  user: User | null;
-  authLoading: boolean;
-  setUser: (user: User | null) => void;
-  setAuthLoading: (v: boolean) => void;
-
   // ── Data ──────────────────────────────────────────────
   reports: Report[];
   devices: Device[];
@@ -66,11 +59,6 @@ interface AppState {
 }
 
 export const useAppStore = create<AppState>((set) => ({
-  user: null,
-  authLoading: true,
-  setUser: (user) => set({ user }),
-  setAuthLoading: (authLoading) => set({ authLoading }),
-
   reports: [],
   devices: [],
   setReports: (reports) => set({ reports }),
