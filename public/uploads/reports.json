@@ -1,0 +1,88 @@
+[
+  {
+    "id": "RPT-1777195866690-6QH0V",
+    "timestamp": "2026-04-26T09:31:06.690Z",
+    "name": "",
+    "phone": "",
+    "type": "Jalan Rusak",
+    "description": "",
+    "location": "Padas,  Klaten,  Central Java",
+    "lat": -7.637328013583834,
+    "lng": 110.6107807159424,
+    "severity": "medium",
+    "status": "active",
+    "imageUrl": "/uploads/RPT-1777195866690-6QH0V-image.jpg",
+    "videoUrl": null,
+    "statusHistory": [
+      {
+        "status": "active",
+        "note": "Laporan diverifikasi oleh admin.",
+        "timestamp": "2026-04-27T10:21:02.508Z"
+      }
+    ]
+  },
+  {
+    "id": "RPT-1777196835157-HP0KA",
+    "timestamp": "2026-04-26T09:47:15.157Z",
+    "name": "",
+    "phone": "",
+    "type": "Kondisi Berbahaya",
+    "description": "",
+    "location": "Jalan Dewi Sartika,  Klaten,  Central Java",
+    "lat": -7.708567593458323,
+    "lng": 110.60249805450441,
+    "severity": "medium",
+    "status": "resolved",
+    "imageUrl": "/uploads/RPT-1777196835157-HP0KA-image.jpg",
+    "videoUrl": null,
+    "statusHistory": [
+      {
+        "status": "resolved",
+        "note": "Laporan diselesaikan oleh admin.",
+        "timestamp": "2026-04-27T10:21:08.639Z"
+      }
+    ]
+  },
+  {
+    "id": "RPT-1777285343866-1UPP7",
+    "timestamp": "2026-04-27T10:22:23.866Z",
+    "name": "",
+    "phone": "",
+    "type": "Jalan Rusak",
+    "description": "",
+    "location": "Jalan Lingkar Alun-alun,  Klaten,  Central Java",
+    "lat": -7.704748072903008,
+    "lng": 110.60231164097787,
+    "severity": "high",
+    "status": "pending",
+    "imageUrl": "/uploads/RPT-1777285343866-1UPP7-image.png",
+    "videoUrl": null
+  },
+  {
+    "id": "RPT-1777286626883-X37IJ",
+    "timestamp": "2026-04-27T10:43:46.883Z",
+    "name": "M. Fahri Firnando ",
+    "phone": "089508844752",
+    "type": "Kondisi Berbahaya",
+    "description": "Kondisi SCP lepas di jalan raya",
+    "location": "Jalan Ki Pandanaran,  Padangan,  Sumberejo",
+    "lat": -7.727704546683835,
+    "lng": 110.58653354644777,
+    "severity": "critical",
+    "status": "resolved",
+    "imageUrl": "/uploads/RPT-1777286626883-X37IJ-image.jpg",
+    "videoUrl": null,
+    "statusHistory": [
+      {
+        "status": "active",
+        "note": "Laporan diverifikasi oleh admin.",
+        "timestamp": "2026-04-27T10:44:03.932Z"
+      },
+      {
+        "status": "resolved",
+        "note": "Laporan diselesaikan oleh admin.",
+        "timestamp": "2026-04-27T10:44:08.737Z"
+      }
+    ]
+  }
+]
