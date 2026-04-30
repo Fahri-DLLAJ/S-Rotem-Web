@@ -99,5 +99,27 @@
     "status": "pending",
     "imageUrl": "/uploads/RPT-1777306007880-FV0KG-image.jpg",
     "videoUrl": null
+  },
+  {
+    "id": "RPT-1777533228721-AAOT6",
+    "timestamp": "2026-04-30T07:13:48.721Z",
+    "name": "Dita",
+    "phone": "08575754646",
+    "type": "Kondisi Berbahaya",
+    "description": "Dibawah tol tidak ada lampu sama sekali",
+    "location": "Wedi,  Klaten,  Central Java",
+    "lat": -7.743625830607794,
+    "lng": 110.58198679432861,
+    "severity": "high",
+    "status": "resolved",
+    "imageUrl": null,
+    "videoUrl": null,
+    "statusHistory": [
+      {
+        "status": "resolved",
+        "note": "Laporan diselesaikan oleh admin.",
+        "timestamp": "2026-04-30T07:14:52.430Z"
+      }
+    ]
   }
 ]

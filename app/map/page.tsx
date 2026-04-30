@@ -85,14 +85,14 @@ export default function MapPage() {
   const activeFilterCount = filters.includes("all") ? 0 : filters.length;
 
   return (
-    <div className="h-[calc(100vh-64px)] flex flex-col bg-gray-950 text-white overflow-hidden">
+    <div className="bg-gray-950 text-white">
 
       {/* ══════════════════════════════════════════════════════════════════
-          TOP BAR
+          TOP BAR — fixed below the navbar
           Mobile : [icon + title]  ···  [filter btn]  [panel btn]
           Desktop: [icon + title + subtitle]  [pills…]  [panel btn]
       ══════════════════════════════════════════════════════════════════ */}
-      <div className="flex-shrink-0 flex items-center gap-2 px-3 sm:px-4 h-12 border-b border-white/10 bg-gray-950">
+      <div className="fixed top-16 left-0 right-0 z-20 flex items-center gap-2 px-3 sm:px-4 h-12 border-b border-white/10 bg-gray-950">
 
         {/* Title */}
         <div className="flex items-center gap-1.5 font-bold text-white flex-shrink-0">
@@ -161,10 +161,10 @@ export default function MapPage() {
       {/* ══════════════════════════════════════════════════════════════════
           BODY
       ══════════════════════════════════════════════════════════════════ */}
-      <div className="flex flex-1 overflow-hidden relative">
+      <div className="fixed top-28 left-0 right-0 bottom-0 flex overflow-hidden">
 
         {/* ── Map ── */}
-        <div className="relative flex-1 overflow-hidden" style={{ isolation: "isolate" }}>
+        <div className="relative flex-1 overflow-hidden" style={{ isolation: "isolate", minHeight: 0 }}>
           <MainMap
             devices={devices}
             reports={reports}
